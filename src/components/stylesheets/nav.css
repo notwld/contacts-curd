@@ -1,9 +1,6 @@
 .nav{
     height: 100px;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 100;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     display: flex;
@@ -14,6 +11,25 @@
     backdrop-filter: blur(10px);
     background-color: pink;
 }
+.nav ul{
+    display: flex;
+    list-style: none;
+    margin-right: 25px;
+}
+
+.nav-btn{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.nav-btn:hover{
+    background-color: rgb(156, 0, 0);
+    color: white;
+    border-radius: 5px;
+}
 .nav h1{
     font-size: 30px;
     font-weight: 700;
@@ -22,11 +38,31 @@
     letter-spacing: 2px;
     font-family: serif;
     z-index: 100;
+    margin-left: 25px;
+}
+a{
+    text-decoration: none;
+}
+.nav ul li a{
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 @media  (max-width: 768px) {
     .nav{
         padding: 0 15px;
+        width: 100%;
+    }
+    .nav h1{
+        font-size: 20px;
+    }
+    .nav ul li a {
+        font-size: 12px;
+    }
+    .nav-btn {
+        padding: 6px 11px;
+
     }
     
 }
+

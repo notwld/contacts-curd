@@ -1,0 +1,256 @@
+
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
+
+.container{
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container{
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container{
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container{
+    max-width: 1320px;
+  }
+}
+
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+}
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+.table > tbody {
+  vertical-align: inherit;
+}
+.table > thead {
+  vertical-align: bottom;
+}
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: currentColor;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 1399.98px) {
+  .table-responsive-xxl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.form-text {
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #6c757d;
+}
+.form-control {
+  display: block;
+  width: fit-content;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.justify{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px!important;
+}
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}
+.my-5{
+  margin-top: 50px;
+}
+
+.btn-edit{
+    background-color: black;
+    color: white;
+    padding: 5px 7px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid black;
+
+}
+.btn-edit:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+
+}
+.btn-del{
+  cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 5px 7px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    border: 1px solid red;
+
+}
+.btn-del:hover{
+    background-color: rgba(255, 0, 0, 0.664);
+    color: black;
+    border: 1px solid black;
+}
+
+@media  screen and (max-width: 768px) {
+  .btn-edit{
+    padding: 5px 7px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid black;
+    margin: 5px 0px;
+  }
+  .btn-del{
+    margin-top:  7px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 5px 7px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    border: 1px solid red;
+    margin: 5px 0px;
+  }
+}
+
+@media screen and (max-width: 471px){
+  .btn-edit{
+    font-size: 12px;
+    padding: 2px 7px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid black;
+    margin: 5px 0px;
+  }
+  .btn-del{
+    font-size: 12px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 2px 7px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    border: 1px solid red;
+    margin: 5px 0px;
+  }
+}
