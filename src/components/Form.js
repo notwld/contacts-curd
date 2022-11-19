@@ -6,15 +6,15 @@ export default function Form() {
       <form>
         <div className='form-group'>
             <label htmlFor='fname'>First Name</label>
-            <input type='text' className='form-control' id='name' placeholder='Enter name' />
+            <input type='text' className='form-control' id='fname' placeholder='Enter first name' />
         </div>
         <div className='form-group'>
             <label htmlFor='lname'>Last Name</label>
-            <input type='text' className='form-control' id='name' placeholder='Enter name' />
+            <input type='text' className='form-control' id='lname' placeholder='Enter last name' />
         </div>
         <div className='form-group'>
             <label htmlFor='contact'>Contact</label>
-            <input type='text' className='form-control' id='name' placeholder='Enter name' />
+            <input type='text' className='form-control' id='contact' placeholder='Enter contact' />
         </div>
         <div className='form-group'>
             <label htmlFor='email'>Email address</label>

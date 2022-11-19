@@ -34,7 +34,9 @@ textarea {
   resize: vertical;
 }
 
-
+td{
+  margin: 10px;
+}
 .container{
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
@@ -82,7 +84,7 @@ textarea {
   margin-bottom: 1rem;
   color: #212529;
   vertical-align: top;
-  border-color: #dee2e6;
+  border-color: #000000;
 }
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
@@ -163,12 +165,39 @@ textarea {
   align-items: center;
   padding: 0px!important;
 }
+.column{
+  flex-direction: column;
+
+}
 .form-control::placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-
+#search{
+ padding: 7px 10px;
+ width: 60%;
+ outline: none;
+ border: 2px solid rgb(0, 0, 0);
+ border-radius: 5px;
+}
+.search-btn{
+  padding: 7px 10px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 25px;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .form-group {
   display: flex;
   flex-direction: column;
@@ -211,13 +240,17 @@ textarea {
 }
 
 @media  screen and (max-width: 768px) {
-  .btn-edit{
+  .btn-edit,.search-btn{
     padding: 5px 7px;
     border-radius: 5px;
     transition: all 0.3s ease;
     cursor: pointer;
     border: 1px solid black;
     margin: 5px 0px;
+
+  }
+  .search-btn{
+    margin-left: 10px;
   }
   .btn-del{
     margin-top:  7px;
