@@ -1,4 +1,5 @@
 
+
 table {
   caption-side: bottom;
   border-collapse: collapse;
@@ -286,4 +287,12 @@ td{
     border: 1px solid red;
     margin: 5px 0px;
   }
+}
+
+.btn-disabled{
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 5px;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './stylesheets/custom_style.css'
+import "./stylesheets/Card.css"
 
 export default function Table() {
   const data = [
@@ -8,30 +9,44 @@ export default function Table() {
       fname: 'bobby',
       lname: 'wld',
       email: 'bobby@gmail.com',
-      phone: '123-456-7890'
+      phone: '123-456-7890',
+      image: "https://joeschmoe.io/api/v1/random"
     },
     {
-      id: 2,
-      fname: 'ryn',
+      id: 1,
+      fname: 'bobby',
       lname: 'wld',
-      email: 'ryn@gmail.com',
-      phone: '123-456-7890'
-    },
-    {
-      id: 3,
-      fname: 'hrn',
-      lname: 'wld',
-      email: 'hrn@gmail.com',
-      phone: '123-456-7890'
-    },
-    {
-      id: 4,
-      fname: 'waleed',
-      lname: 'farrukh',
-      email: 'waleed@gmail.com',
-      phone: '123-456-7890'
-    },
+      email: 'bobby@gmail.com',
+      phone: '123-456-7890',
+      image: "https://joeschmoe.io/api/v1/random"
 
+    },
+    {
+      id: 1,
+      fname: 'bobby',
+      lname: 'wld',
+      email: 'bobby@gmail.com',
+      phone: '123-456-7890',
+      image: "https://joeschmoe.io/api/v1/random"
+
+    },
+    {
+      id: 1,
+      fname: 'bobby',
+      lname: 'wld',
+      email: 'bobby@gmail.com',
+      phone: '123-456-7890',
+      image: "https://joeschmoe.io/api/v1/random"
+
+    },    {
+      id: 1,
+      fname: 'bobby',
+      lname: 'wld',
+      email: 'bobby@gmail.com',
+      phone: '123-456-7890',
+      image: "https://joeschmoe.io/api/v1/random"
+
+    },
   ]
   const  filter_data = () => {
     var input, filter, table, tr, td, cell, i, j;
@@ -54,13 +69,41 @@ export default function Table() {
       }
     }
   }
+
   return (
     <div className='justify column'>
       <div className="row my-5">
         <input type="text" id="search" placeholder="Search" onKeyUp={filter_data} />
         <button className="search-btn" onClick={filter_data}>Search</button>
       </div>
-      <table className="container table my-5" id='data-table'>
+
+        <h1>Responsive Card Grid Layout</h1>
+        <div className='main'>
+
+        <ul class="cards">
+      {
+      data.map((item, index) => (
+        
+          <li class="cards_item">
+            <div class="card">
+              {/* <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"/></div> */}
+              <div className='card-avatar' ><img src={item.image}/></div>
+      
+              <div class="card_content">
+                <h2 class="card_title">{item.fname} {item.lname}</h2>
+                <p class="card_text">Phone: {item.phone}</p>
+                <p class="card_text">Email: {item.email}</p>
+                <button class="btn card_btn">Edit </button>
+                <button class="btn card_btn">Delete </button>
+              </div>
+            </div>
+          </li>
+      ))
+}
+      </ul>
+      </div>
+
+      {/* <table className="container table my-5" id='data-table'>
         <thead>
           <tr>
             <th scope="col">First Name</th>
@@ -84,7 +127,9 @@ export default function Table() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
+
+
     </div>
   )
 }
