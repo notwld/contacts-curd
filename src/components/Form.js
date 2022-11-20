@@ -1,8 +1,14 @@
 import React,{useState} from 'react'
+import { useNavigate } from "react-router-dom";
 
-export default function Form() {
+export default function Form(props) {
 
-  const [contact,setContact] = useState({})
+  let navigation = useNavigate();
+
+  const [contact,setContact] = useState({
+    image: "https://joeschmoe.io/api/v1/random"
+
+  })
 
   const changeHandler = (event) => {
     setContact({...contact, [event.target.name]: event.target.value})
@@ -15,6 +21,10 @@ export default function Form() {
   const createContact = (e) =>{
     e.preventDefault()
     console.log(contact)
+    let data = [...props.data,contact]
+    props.setData(data)
+    navigation("/",{ replace: true },{state:{data : data, setData:props.setData  }});
+
   }
 
   return (
@@ -30,7 +40,7 @@ export default function Form() {
               <div class="card_content">
                 <h2 class="card_title"></h2>
             
-                <form className='card' onClick={(e) => createContact(e)}>
+                <form onSubmit={(e) => createContact(e)}  className='card' >
          <div className='form-group'>
              <label htmlFor='fname'>First Name</label>
              <input onChange={(e) => changeHandler(e)} value={contact.fname} name="fname" type='text' className='form-control' id='fname' placeholder='Enter first name' />
@@ -48,7 +58,7 @@ export default function Form() {
              <input onChange={(e) => changeHandler(e)} value={contact.email}  name="email" type='email' className='form-control' id='email' placeholder='Enter email' />
          </div>
          <div className='form-group'>
-             <button disabled={contact.fname && contact.lname && contact.phone && contact.email ? false : true} type="button" className={contact.fname && contact.lname && contact.phone && contact.email ? 'nav-btn' : 'btn-disabled'}>
+             <button disabled={contact.fname && contact.lname && contact.phone && contact.email ? false : true} type="submit" className={contact.fname && contact.lname && contact.phone && contact.email ? 'nav-btn' : 'btn-disabled'}>
                  Submit
              </button>
          </div>

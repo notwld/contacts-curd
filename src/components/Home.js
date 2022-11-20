@@ -1,53 +1,14 @@
 import React from 'react'
 import './stylesheets/custom_style.css'
 import "./stylesheets/Card.css"
+import { useLocation } from 'react-router-dom';
 
-export default function Table() {
-  const data = [
-    {
-      id: 1,
-      fname: 'bobby',
-      lname: 'wld',
-      email: 'bobby@gmail.com',
-      phone: '123-456-7890',
-      image: "https://joeschmoe.io/api/v1/random"
-    },
-    {
-      id: 1,
-      fname: 'bobby',
-      lname: 'wld',
-      email: 'bobby@gmail.com',
-      phone: '123-456-7890',
-      image: "https://joeschmoe.io/api/v1/random"
+export default function Table(props) {
+  const { state } = useLocation();
 
-    },
-    {
-      id: 1,
-      fname: 'bobby',
-      lname: 'wld',
-      email: 'bobby@gmail.com',
-      phone: '123-456-7890',
-      image: "https://joeschmoe.io/api/v1/random"
+  console.log(state)
 
-    },
-    {
-      id: 1,
-      fname: 'bobby',
-      lname: 'wld',
-      email: 'bobby@gmail.com',
-      phone: '123-456-7890',
-      image: "https://joeschmoe.io/api/v1/random"
 
-    },    {
-      id: 1,
-      fname: 'bobby',
-      lname: 'wld',
-      email: 'bobby@gmail.com',
-      phone: '123-456-7890',
-      image: "https://joeschmoe.io/api/v1/random"
-
-    },
-  ]
   const  filter_data = () => {
     var input, filter, table, tr, td, cell, i, j;
     input = document.getElementById("search");
@@ -82,7 +43,7 @@ export default function Table() {
 
         <ul class="cards">
       {
-      data.map((item, index) => (
+      props.data.map((item, index) => (
         
           <li class="cards_item">
             <div class="card">
