@@ -296,3 +296,39 @@ td{
   border-radius: 5px;
   margin-right: 5px;
 }
+.model-div{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  background-color: rgba(48, 45, 45, 0.5);
+  display: none;
+}
+.model{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  width: 500px;
+  border-radius: 15px;
+}
+.close{
+  position: absolute;
+  color: white;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.model span{
+  color:  white;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
