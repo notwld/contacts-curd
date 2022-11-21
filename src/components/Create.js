@@ -20,19 +20,24 @@ export default function Form(props) {
   
   const createContact = (e) =>{
     e.preventDefault()
-    console.log(contact)
+    let date = new Date().toISOString()
+    contact["date"] = date
     let data = [...props.data,contact]
     props.setData(data)
     navigation("/",{ replace: true },{state:{data : data, setData:props.setData  }});
 
   }
 
+
+
   return (
    
    
     <div className='main '>
 
-        <ul class="cards" style={{ width:"100%" }}>
+      <h1 style={{ textAlign:"center" }}>Create Contacts </h1>
+
+        <ul class="cards" style={{ width:"100%",justifyContent:"center",padding:"20px" }}>
         
           <li class="cards_item">
             <div class="card">

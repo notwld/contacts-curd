@@ -9,7 +9,9 @@
     padding: 0 50px;
     box-sizing: border-box;
     backdrop-filter: blur(10px);
-    background-color: pink;
+    /* background-color: pink; */
+    background: linear-gradient(to bottom left, #282525 60%, #3f3f3f 100%);
+
 }
 .nav ul{
     display: flex;
@@ -18,22 +20,22 @@
 }
 
 .nav-btn{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px 20px;
     border-radius: 5px;
     margin-right: 5px;
 }
 
 .nav-btn:hover{
-    background-color: rgb(156, 0, 0);
-    color: white;
+    background-color: rgb(160, 159, 159);
+    color: black;
     border-radius: 5px;
 }
 .nav h1{
     font-size: 30px;
     font-weight: 700;
-    color: rgb(156, 0, 0);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: serif;
